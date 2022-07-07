@@ -88,6 +88,9 @@ public class CustomerMenuView implements CustomerMenuViewService{
                                         System.out.println("Phone present in cart already!!!");
                                         System.out.println("Choose update quantity from menu to change the quantity");
                                     }
+                                    else if(quantity==0) {
+                                        System.out.println("Sorry!!! Cannot add product to cart");
+                                    }
                                     else if(shopController.phoneAvailable(id,quantity) && !shoppingCartController.phoneInCartAlready(customerAccountController.getUserName(),id)) {
                                         shoppingCartController.addPhoneToShoppingCart(this.customerAccountController.getUserName(),id,quantity);
                                         System.out.println("Product added to cart successfully.......");
