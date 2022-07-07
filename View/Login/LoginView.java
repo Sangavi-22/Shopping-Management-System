@@ -247,7 +247,12 @@ public class LoginView implements LoginViewService {
                     break;
             }
         }
-        catch(ArithmeticException e) {
+         catch(ArithmeticException | NumberFormatException | NullPointerException exception) {
+            System.out.println(" Some problem occurred !!!");
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            System.out.println("! Please wait while we take you back to the main page !");
+            System.out.println("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            homePage();
         }
 
     }
