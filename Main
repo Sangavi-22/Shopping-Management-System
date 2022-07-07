@@ -1,0 +1,14 @@
+import Model.Login.LoginModel;
+import View.Login.LoginView;
+import View.Login.LoginViewService;
+import Controller.ControlLogin.LoginController;
+import Controller.ControlLogin.LoginControllerService;
+
+public class Main {
+    public static void main(String[] args){
+        LoginModel loginModel=new LoginModel();
+        LoginViewService loginView=new LoginView();
+        LoginControllerService loginController=new LoginController(loginModel,loginView);
+        loginController.goToHomePage();
+    }
+}
