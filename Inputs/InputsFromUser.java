@@ -69,7 +69,7 @@ public class InputsFromUser {
     public String inputUserName(){
         String userName;
         while(true) {
-            System.out.println("Enter your username:");
+            System.out.println("Enter the username:");
             userName = input.nextLine();
             if(!(validate.validateUserAccountName(userName))) {
                 System.out.println("Invalid username");
@@ -84,7 +84,7 @@ public class InputsFromUser {
     public String inputPassword(){
         String passkey;
         while(true) {
-            System.out.println("Enter your password:");
+            System.out.println("Enter the password:");
             passkey = input.nextLine();
             if(!(validate.validatePassword(passkey))) {
                 System.out.println("Invalid password");
